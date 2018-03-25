@@ -163,7 +163,10 @@ api_1    |   syscall: 'getaddrinfo',
 api_1    |   hostname: 'cluster-analytics.cloudboost.io',
 api_1    |   host: 'cluster-analytics.cloudboost.io',
 api_1    |   port: 80 }
-
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping cloudboostplayground_api_1   ... done
+Stopping cloudboostplayground_redis_1 ... done
+Stopping cloudboostplayground_mongo_1 ... done
 
 ### Other shell screen here
 
@@ -173,3 +176,12 @@ CONTAINER ID        IMAGE                          COMMAND                  CREA
 209c6d99a69b        cloudboost/cloudboost:latest   "npm start"              2 minutes ago       Up 2 minutes        0.0.0.0:4730->4730/tcp, 0.0.0.0:80->4730/tcp                                 cloudboostplayground_api_1
 e63a26cd8dc4        redis:3.0                      "docker-entrypoint.s…"   3 minutes ago       Up 2 minutes        0.0.0.0:6379->6379/tcp, 0.0.0.0:16379->16379/tcp, 0.0.0.0:26379->26379/tcp   cloudboostplayground_redis_1
 5f0579a4215a        mongo:3.4                      "docker-entrypoint.s…"   3 minutes ago       Up 2 minutes        0.0.0.0:27017->27017/tcp                                                     cloudboostplayground_mongo_1
+
+# fititnt at bravo in /alligo/code/fititnt/cloudboost-playground on git:master x [12:33:52]
+$ docker-compose down --volumes --rmi all
+Removing cloudboostplayground_api_1   ... done
+Removing cloudboostplayground_redis_1 ... done
+Removing cloudboostplayground_mongo_1 ... done
+Removing image redis:3.0
+Removing image mongo:3.4
+Removing image cloudboost/cloudboost:latest

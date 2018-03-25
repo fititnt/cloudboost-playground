@@ -45,9 +45,24 @@ CONTAINER ID        IMAGE                          COMMAND                  CREA
 e63a26cd8dc4        redis:3.0                      "docker-entrypoint.s…"   21 minutes ago      Up 21 minutes       0.0.0.0:6379->6379/tcp, 0.0.0.0:16379->16379/tcp, 0.0.0.0:26379->26379/tcp   cloudboostplayground_redis_1
 5f0579a4215a        mongo:3.4                      "docker-entrypoint.s…"   21 minutes ago      Up 21 minutes       0.0.0.0:27017->27017/tcp                                                     cloudboostplayground_mongo_1
 
+$ echo "The core of cloudboost is open source ('Apache License 2.0') which is nice and a good bussiness model, but keep in mind there is no open source gui"
+The core of cloudboost is open source (Apache License 2.0) which is nice and a good bussiness model, but keep in mind there is no open source gui
 
+# See screenshots. I guess this is a BaaS for Enterprise products or they also
+# use they own BaaS to work as consulting for they clients, as we can see
+# here https://www.cloudboost.io/consulting/. So at this point I guess, for
+# the proposes of the chatops-wg, will see other products
+
+### Stop and clean all resources (DO NOT RUN `docker-compose down --volumes --rmi all` ON PRODUCTION)
+docker-compose down --volumes --rmi all
 
 ```
+
+## Screenshots
+
+![1-docker-running--no-gui.png](screenshots/1-docker-running--no-gui.png)
+![2-the-hosted-version-is-expensive--enterprise-expensive-level.png](screenshots/2-the-hosted-version-is-expensive--enterprise-expensive-level.png)
+![3-the-hosted-version-requires-pro-version(249USD)-to-export-data.png](screenshots/3-the-hosted-version-requires-pro-version(249USD)-to-export-data.png)
 
 ## Enviroment
 
